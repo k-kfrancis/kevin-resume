@@ -5,6 +5,7 @@
           cache: "npm"
           cache-dependency-path: "Resume - Comic/package-lock.json"
 
+
       - name: Install
         run: npm ci
         working-directory: "Resume - Comic"
