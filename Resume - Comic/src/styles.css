@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Inter:wght@400;600;800&display=swap");
+
+:root {
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #0b0c10;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 28px 16px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero {
+    border: 4px solid #f5c518;
+    border-radius: 18px;
+    padding: 18px 18px 14px;
+    background: 
+        radial-gradient(circle at 20% 10%, rgba(245, 197, 24, 0.18), transparent 45%),
+        radial-gradient(circle at 90% 30%, rgba(255, 255, 255, 0.08), transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.25));
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+    position: relative;
+    overflow: hidden;
+}
+
+/* keep header content above textures */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  pointer-events: none;
+
+  border-top: 3px solid rgba(0, 0, 0, 0.95);
+  opacity: 0.9;
+
+  background:
+    /* base ground */
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 0 100% / 100% 14px no-repeat,
+
+    /* buildings */
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 3% 100% / 70px 30px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)) 12% 100% / 46px 22px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 20% 100% / 90px 36px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)) 33% 100% / 54px 26px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 42% 100% / 80px 34px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)) 55% 100% / 60px 24px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 64% 100% / 110px 38px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)) 78% 100% / 64px 28px no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) 87% 100% / 96px 35px no-repeat,
+
+    /* faint “window” texture */
+    repeating-linear-gradient(
+      90deg,
+      rgba(245, 197, 24, 0.05) 0px,
+      rgba(245, 197, 24, 0.05) 2px,
+      transparent 2px,
+      transparent 9px
+    ) 0 100% / 100% 44px no-repeat;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 72% 32%, rgba(245, 197, 24, 0.22), transparent 46%),
+    radial-gradient(circle at 72% 32%, rgba(245, 197, 24, 0.10), transparent 62%);
+  opacity: 1;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.heroTop {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+/* skyline strip */
+.hero .skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42px;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0px,
+      rgba(0, 0, 0, 0.95) 18px,
+      rgba(0, 0, 0, 0.70) 18px,
+      rgba(0, 0, 0, 0.70) 26px
+    );
+  border-top: 3px solid rgba(0, 0, 0, 0.95);
+  opacity: 0.85;
+}
+
+
+.name {
+    margin: 0;
+    font-family: Bangers, Inter, sans-serif;
+    font-size: 56px;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #f5c518;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.9);
+}
+
+
+.title {
+  margin: 8px 0 0;
+  font-family: Anton, Inter, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.contact {
+  text-align: right;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.signal {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 12px;
+  padding: 10px 12px;
+
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(0, 0, 0, 0.72);
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 13px;
+}
+
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: rgba(10, 11, 14, 0.92);
+
+  box-shadow:
+    10px 10px 0 rgba(245, 197, 24, 0.14),
+    -6px 6px 0 rgba(255, 255, 255, 0.05),
+    0 22px 40px rgba(0, 0, 0, 0.70);
+
+
+  clip-path: polygon(
+    0 14px,
+    14px 0,
+    calc(100% - 18px) 0,
+    100% 18px,
+    100% calc(100% - 14px),
+    calc(100% - 14px) 100%,
+    0 100%
+  );
+}
+
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: #000;
+  z-index: 0;
+
+  clip-path: polygon(
+    0 16px,
+    16px 0,
+    calc(100% - 22px) 0,
+    100% 22px,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%
+  );
+}
+
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.18;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.panelHeader {
+  position: relative;
+  z-index: 1;
+
+  padding: 12px 14px;
+
+  background: #f5c518;
+  border-bottom: 4px solid #000;
+}
+
+/* caption notch on the right */
+.panelHeader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 34px;
+  height: 34px;
+
+  background: #f5c518;
+  border-left: 4px solid #000;
+  border-bottom: 4px solid #000;
+
+  transform: skewX(-18deg);
+}
+
+.panelTitle {
+  margin: 0;
+  font-family: Anton, Inter, sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #090a0d;
+}
+
+.panelBody {
+  position: relative;
+  z-index: 1;
+  padding: 14px;
+
+  border-left: 4px solid rgba(255, 255, 255, 0.10);
+  border-right: 4px solid rgba(255, 255, 255, 0.08);
+}
+
+.speech {
+  border-color: #f5c518;
+}
+
+.speech .panelBody {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+}
+
+.bodyText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+.skillLabel {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.job {
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.jobRole {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.jobOrg {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.jobDates {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+@media (min-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .grid > .panel:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* subtle “hand placed” tilt */
+.grid > .panel:nth-child(1) { transform: rotate(-0.25deg); }
+.grid > .panel:nth-child(2) { transform: rotate(0.2deg); }
+.grid > .panel:nth-child(3) { transform: rotate(-0.15deg); }
+.grid > .panel:nth-child(4) { transform: rotate(0.15deg); }
+.grid > .panel:nth-child(5) { transform: rotate(-0.1deg); }
+
+/* keep it accessible */
+@media (prefers-reduced-motion: reduce) {
+  .grid > .panel { transform: none; }
+}
+
